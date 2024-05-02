@@ -1,0 +1,583 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+}
+
+body{
+  background-color: #181419;
+  color: #ffffff;
+}
+
+header {
+  background-color: #9f3647;
+  display: block;
+  color: #ffffff;
+  height: 10vh;
+  z-index: 10;
+}
+
+
+.menu{
+  position: absolute;
+  margin-top: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+
+}
+
+.menu .anclaLogo{
+  text-decoration: none;
+}
+
+.menu .anclaLogo .fa{
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-right: 3px;
+
+}
+
+span{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+  
+}
+
+.menu .navegacion ul{
+  list-style: none;
+
+}
+
+.menu .navegacion ul li{
+  position: relative;
+  float: left;
+  margin-left: 30px;
+  margin-right: 0;
+  
+}
+
+.menu .navegacion ul li a{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display:block;
+  padding: 0px 5px;
+  border-radius: 10px;
+  text-decoration: none;
+ 
+  
+}
+
+.menu .navegacion ul li a.iniciarSesion{
+  background-color: black;
+}
+
+.linkNav{
+  display: inline-block;
+  background-color: #9f3647;
+  transition: transform 0.9s, box-shadow 1s;
+  font-weight: 700;
+  font-size: 1.1rem;
+  
+}
+
+.menu .navegacion ul li a:hover{
+  background-color: #9c293c;
+  box-shadow: 0 0 10px #9c293c;
+  
+}
+
+.sectionPrincipal {
+  background: url(/img/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sectionPrincipal h1{
+  font-size: 4.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.sectionPrincipal h2{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.botonRegistrarse {
+  background-color: #9f3647;
+  color: #ffffff;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botonRegistrarse a:hover{
+  color: #d60a58;
+}
+
+.buscadorPrincipal {
+  background-color: #181419;
+  color: rgb(255, 255, 255);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloSection {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.inputBuscador {
+  border: 2px solid white;
+  border-radius: 25px;
+  color: #000000;
+  font-size: 1.1rem;
+  height: 50px;
+  margin: 10px 0px;
+  outline: none;
+  padding: 0px 20px;
+  width: 450px;
+}
+
+.botonBuscador {
+  background-color: #9f3647;
+  display: inline-block;
+  color: #ffffff;
+  height: 50px;
+  margin: 20px 10px;
+  padding: 0 20px;
+  border-radius: 35px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 2px solid white;
+  text-align: center;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+hr {
+  border: 1px solid #9f3647;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.peliculasTendencia{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.peliculas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  
+}
+
+.pelicula {
+  width: 200px;
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.tituloPelicula {
+  color: #ffffff;
+  z-index: 3;
+  font-size: 3rem;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 25%;
+  max-width: 20rem;
+  width: 50%;
+  
+}
+
+.imgTendencia {
+  width: 160%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  opacity: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn-anterior {
+  border: 1px solid white;
+  box-sizing: content-box;
+  margin-left: 20px;
+  background-color: #9f3647;
+  color: #ffffff;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 60px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-siguiente{
+  border: 1px solid white;
+  box-sizing: content-box;
+  margin-top: 50px;
+  margin-left: 20px;
+  background-color: #9f3647;
+  color: #ffffff;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 60px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aclamadas {
+  overflow-x: scroll;
+  width: 150%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 20px 0px;
+}
+
+.peliculasAclamadas {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.ft .navegacion ul{
+  display: block;
+}
+
+.flechaArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#contact {
+  background-color: #9f3647;
+  color: #ffffff;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .ft .navegacion ul{
+  list-style: none;
+  position: relative;
+  top: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+}
+
+.ft .navegacion ul a.administradorPeliculas{
+  background-color: black;
+}
+
+.ft .navegacion ul li a{
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.registro{
+  display: flex;
+  background-image: url(../img/fondo.jpg);
+}
+
+
+.containerDetail{
+  /*border: 2px solid blue;*/
+  background-image: url(/img/mario-bg.jpg);
+  display: flex;
+  height: 70vh;
+ 
+}
+
+.containerDetail .imgDetail .marioFoto{
+  /*border: 2px solid red;*/
+  width: 65%;
+  object-position: center;
+  margin-left: 160px;
+  border-radius: 20px;
+  margin-top: 50px;
+  
+}
+
+.textDetail{
+  width: 700px;
+  height: 53vh;
+  color: #ffffff;
+  margin-top: 100px;
+  padding-top: 50px;
+  margin-left: 60px;
+  
+}
+
+.textDetail h1{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.textDetail .containerCredits{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.textDetail .containerCredits .credit h3{
+  font-size: 20px;
+  margin-top: -20px;
+  padding-top: 10px;
+}
+.textDetail .containerCredits .credit h5{
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+.trailer{
+  display: flex;
+  color: #ffffff;
+  height: 100vh;
+  
+}
+.containerVideo{
+  width: 570px;
+  height: 60vh;
+  margin-top: 150px;
+  
+  margin-left: 160px;
+}
+
+.containerVideo h2{
+  margin-top: 0px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.containerInfo{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  color: #ffffff;
+  height: 60vh;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  margin-left: 0px;
+
+}
+.redes{
+  width: 400px;
+  margin-bottom: 0px;
+  
+  
+}
+.redes li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  justify-content: space-evenly;
+  
+  
+}
+.containerInfo .redes li {
+  font-size: 2.5rem;
+  
+}
+
+.fab{
+  padding: 0 30px;
+  font-size: 2.5rem;
+
+}
+
+.info{
+  width: 400px;
+  display: block;
+  padding: 20px 35px;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+}
+
+
+.formulario{
+  background-image: url(/img/fondo.jpg);
+  z-index: 10000;
+}
+
+.containerRegistro
+{
+  max-width: 350px;
+  width: 100%;
+  background: #333333;
+  padding: 15px;
+  border-radius: 15px;
+  margin-left: 500px;
+  margin-top: 50px;
+  
+}
+
+.containerRegistro .title
+{
+  font-size: 2.2rem;
+  font-weight: bolder;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.containerRegistro form .user-details 
+{
+  
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 10px 20 12px 0;
+ 
+
+}
+
+form .user-details .input-box
+{
+  margin-bottom: 10PX;
+ 
+}
+
+.user-details .input-box .details
+{
+  display:block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input, select
+{
+  height:40px;
+  width: 100%;
+  background: #333333;
+  color: white;
+  outline: none;
+  border-radius: 35px;
+  border: 2px solid #9f3647;
+  padding-left: 15px;
+  font-size: 1.0rem;
+  border-bottom-width: 2x;
+
+}
+
+.input-box select{
+  color: #ffffff;
+}
+
+form .btn
+{
+  height: 45px;
+  margin: 15px 0;
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+.btn {
+  width: 90%;
+  box-sizing: content-box;
+  background-color: #9f3647;
+  border: 2px solid #9f3647;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+@media(max-width: 584px)
+{
+  .containerRegistro{
+    max-width: 100%;
+  }
+
+  form .user-details .input-box
+  {
+    margin-bottom: 15PX;
+    width: 100%;
+  }
+
+  .containerRegistro form .user-details
+  {
+    max-height: 300px;
+    overflow-y: scroll;
+
+  }
+  .user-details::-webkit-scrollbar
+  {
+    width: 0;
+  }
+}

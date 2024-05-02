@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP-CAC-MOVIES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icons8-clapperboard-48.png"> 
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap" rel="stylesheet">
+  </head>
+
+  <!-- Aqui insertamos el logo y un form registro con Boostrap -->
+
+  <body class="registro">
+  
+    <header class="header">
+      <!-- Aqui insertamos el logo -->
+      <div class="menu container">
+        <a class="anclaLogo" href="#">
+          <i class="fa fa-film" aria-hidden="true"></i>
+          <span>CAC-Movies</span>
+        </a>
+      </div>
+    </header>
+    <!-- Aqui cargamos un formato de registro-->
+    <div class="containerRegistro">
+      <fieldset>
+        <div class="title">Registro</div>
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <input type="text" placeholder="Nombre" required>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Apellido" required>
+            </div>
+            <div class="input-box">
+              <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Contraseña" required>
+            </div>
+            <div class="input-box">
+              <input type="date" placeholder="dd/mm/aaaa">
+            </div>
+            <div class="input-box">
+              <select name="Pais" id="Pais" >
+                <option value="1">Argentina</option>
+                <option value="2">Venezuela</option>
+                <option value="3">Chile</option>
+                <option value="4">Colombia</option>
+                <option value="5">Bolivia</option>
+                <option value="6">Paraguay</option>
+                <option value="7">Uruguay</option>
+              </select>
+            </div>
+            <div>
+              <input class="input-box" type="checkbox">
+              <label class="input-box">
+                Acepto términos y condiciones
+              </label>
+            </div>
+            <div class="input-Btn">
+              <button type="button" class="btn">Registrarse</button>
+            </div>
+            <div>
+              &#191;Necesitas ayuda &#63;
+            </div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
